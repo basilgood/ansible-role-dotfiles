@@ -1,0 +1,17 @@
+---
+
+- name: Ansible ppa
+  apt_repository:
+    repo: ppa:ansible/ansible
+
+- name: Hstr ppa
+  apt_repository:
+    repo: ppa:ultradvorka/ppa
+
+- name: Vim ppa
+  apt_repository:
+    repo: ppa:jonathonf/vim
+
+- name: Update
+  apt:
+    update_cache: true

@@ -1,0 +1,8 @@
+---
+
+- name: Set git account
+  template:
+    src: gitconfig.j2
+    dest: '{{ dotfiles_gitconfig_path }}'
+  become: true
+  become_user: true

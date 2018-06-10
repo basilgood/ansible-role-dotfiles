@@ -1,0 +1,12 @@
+---
+
+- name: Install packages
+  apt:
+    name:
+      - git
+      - vim-gnome
+      - build-essential
+      - hh
+      - qbittorrent
+      - ubuntu-restricted-addons
+      - ubuntu-restricted-extras

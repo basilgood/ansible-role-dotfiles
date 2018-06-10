@@ -1,2 +1,9 @@
 ---
-# defaults file for ansible-role-dotfiles
+
+dotfiles_user: vasy
+dotfiles_repo: git@github.com:basilgood/dot.git
+dotfiles_bare_path: /home/{{ dotfiles_user }}/.dotfiles
+dotfiles_project_path: /home/{{ dotfiles_user }}/Projects/dotfiles
+dotfiles_git_user_name: basilgood
+dotfiles_git_user_email: elsile69@yahoo.com
+dotfiles_gitconfig_path: /home/{{ dotfiles_user }}/.gitconfig
