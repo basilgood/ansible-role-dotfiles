@@ -5,4 +5,4 @@
     src: gitconfig.j2
     dest: '{{ dotfiles_gitconfig_path }}'
   become: true
-  become_user: true
+  become_user: '{{ dotfiles_user }}'

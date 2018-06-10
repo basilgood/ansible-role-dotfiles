@@ -3,6 +3,7 @@
 - name: Install packages
   apt:
     name:
+      - acl
       - git
       - vim-gnome
       - build-essential
