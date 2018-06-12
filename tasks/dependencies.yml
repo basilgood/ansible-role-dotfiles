@@ -11,3 +11,4 @@
       - qbittorrent
       - ubuntu-restricted-addons
       - ubuntu-restricted-extras
+      - chromium-browser
