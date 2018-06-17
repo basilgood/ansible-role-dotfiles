@@ -1,10 +1,22 @@
 ---
 
+- name: Add an apt key by id ansible
+  become: true
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367
+
 - name: Ansible ppa
   become: true
   apt_repository:
     repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
+
+- name: Add an apt key by id hstr
+  become: true
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 1E841C1E5C04D97ABFF8FCB63A9508A2CC6FC1EB
 
 - name: Hstr ppa
   become: true
@@ -12,11 +24,23 @@
     repo: deb http://ppa.launchpad.net/ultradvorka/ppa/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
 
+- name: Add an apt key by id vim
+  become: true
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 4AB0F789CBA31744CC7DA76A8CF63AD3F06FC659
+
 - name: Vim ppa
   become: true
   apt_repository:
     repo: deb http://ppa.launchpad.net/jonathonf/vim/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
+
+- name: Add an apt key by id Papirus theme
+  become: true
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 9461999446FAF0DF770BFC9AE58A9D36647CAE7F
 
 - name: Papirus themes
   become: true
