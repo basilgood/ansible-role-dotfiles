@@ -1,6 +1,7 @@
 ---
 
 - include: ppa.yml
+  when: dotfiles_add_ppa == true
 
 - include: dependencies.yml
 
