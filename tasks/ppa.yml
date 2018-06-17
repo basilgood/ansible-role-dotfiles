@@ -1,20 +1,30 @@
 ---
 
 - name: Ansible ppa
+  become: true
   apt_repository:
     repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
 
 - name: Hstr ppa
+  become: true
   apt_repository:
     repo: deb http://ppa.launchpad.net/ultradvorka/ppa/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
 
 - name: Vim ppa
+  become: true
   apt_repository:
     repo: deb http://ppa.launchpad.net/jonathonf/vim/ubuntu {{ dotfiles_ubuntu_version }} main
     state: present
 
+- name: Papirus themes
+  become: true
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/papirus/papirus/ubuntu {{ dotfiles_ubuntu_version }} main
+    state: present
+
 - name: Update
+  become: true
   apt:
     update_cache: true

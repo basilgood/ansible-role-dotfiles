@@ -1,6 +1,7 @@
 ---
 
 - name: Install packages
+  become: true
   apt:
     name: '{{ item }}'
     force: true
@@ -14,3 +15,5 @@
     - ubuntu-restricted-addons
     - ubuntu-restricted-extras
     - chromium-browser
+    - arc-kde
+    - kvantum

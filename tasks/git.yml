@@ -2,8 +2,8 @@
 
 - name: Dotfiles alias
   shell: echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.bashrc
-  become: true
-  become_user: '{{ dotfiles_user }}'
+  # become: false
+  # become_user: '{{ dotfiles_user }}'
 
 - name: Bare git repo
   git:
@@ -11,13 +11,13 @@
     repo: '{{ dotfiles_repo }}'
     bare: true
     dest: '{{ dotfiles_bare_path }}'
-  become: true
-  become_user: '{{ dotfiles_user }}'
+    # become: false
+  # become_user: '{{ dotfiles_user }}'
 
 - name: Normal git repo
   git:
     accept_hostkey: true
     repo: '{{ dotfiles_repo }}'
     dest: '{{ dotfiles_project_path }}'
-  become: true
-  become_user: '{{ dotfiles_user }}'
+    # become: false
+  # become_user: '{{ dotfiles_user }}'
