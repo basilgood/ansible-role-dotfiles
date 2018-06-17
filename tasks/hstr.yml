@@ -1,0 +1,6 @@
+---
+
+- name: Configure hstr
+  shell: hh --show-configuration >> ~/.bashrc
+  become: true
+  become_user: '{{ dotfiles_user }}'
