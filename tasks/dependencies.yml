@@ -2,13 +2,15 @@
 
 - name: Install packages
   apt:
-    name:
-      - acl
-      - git
-      - vim-gnome
-      - build-essential
-      - hh
-      - qbittorrent
-      - ubuntu-restricted-addons
-      - ubuntu-restricted-extras
-      - chromium-browser
+    name: '{{ item }}'
+    force: true
+  with_items:
+    - acl
+    - git
+    - vim-gnome
+    - build-essential
+    - hh
+    - qbittorrent
+    - ubuntu-restricted-addons
+    - ubuntu-restricted-extras
+    - chromium-browser

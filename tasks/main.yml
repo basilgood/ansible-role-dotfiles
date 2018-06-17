@@ -1,9 +1,9 @@
 ---
 
-- include_tasks: ppa.yml
+- include: ppa.yml
 
-- include_tasks: dependencies.yml
+- include: dependencies.yml
 
-- include_tasks: git.yml
+- include: git.yml
 
-- include_tasks: gitconfig.yml
+- include: gitconfig.yml

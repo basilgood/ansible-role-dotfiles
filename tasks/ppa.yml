@@ -2,15 +2,18 @@
 
 - name: Ansible ppa
   apt_repository:
-    repo: ppa:ansible/ansible
+    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu {{ dotfiles_ubuntu_version }} main
+    state: present
 
 - name: Hstr ppa
   apt_repository:
-    repo: ppa:ultradvorka/ppa
+    repo: deb http://ppa.launchpad.net/ultradvorka/ppa/ubuntu {{ dotfiles_ubuntu_version }} main
+    state: present
 
 - name: Vim ppa
   apt_repository:
-    repo: ppa:jonathonf/vim
+    repo: deb http://ppa.launchpad.net/jonathonf/vim/ubuntu {{ dotfiles_ubuntu_version }} main
+    state: present
 
 - name: Update
   apt:
