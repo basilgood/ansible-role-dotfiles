@@ -1,5 +1,10 @@
 ---
 
+- name: Dotfiles alias
+  shell: echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.bashrc
+  become: true
+  become_user: '{{ dotfiles_user }}'
+
 - name: Bare git repo
   git:
     accept_hostkey: true

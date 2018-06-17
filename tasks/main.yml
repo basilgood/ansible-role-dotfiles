@@ -5,5 +5,3 @@
 - include: dependencies.yml
 
 - include: git.yml
-
-- include: gitconfig.yml
